@@ -13,6 +13,10 @@
     width: 900px;
 }
 
+.header {
+    font-weight: bold;
+}
+
 .coin {
     display: flex;
     align-items: center;
@@ -25,6 +29,10 @@
     width: 150px;
 }
 
+.name {
+    padding-left: 100px;
+}
+
 .coin img {
     height: 30px;
     width: 30px;
@@ -33,6 +41,7 @@
 
 .coin-symbol {
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .coin-data {

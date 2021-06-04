@@ -24,7 +24,7 @@ const Coin = ( { name, image, symbol, price, volume, priceChange, marketcap } ) 
                     )
                 }
                 <p className="coin-marketcap">
-                    Market Cap: ${marketcap.toLocaleString()}
+                    £{marketcap.toLocaleString()}
                 </p>
                 </div>
             </div>
@@ -32,4 +32,5 @@ const Coin = ( { name, image, symbol, price, volume, priceChange, marketcap } ) 
     )
 }
 
-export default Coin
+export default Coin;
+

@@ -17,15 +17,18 @@ function App() {
     .catch(error => console.log(error));
   }, []);
 
+  // Search function input 
   const handleChange = e => {
     setSearch(e.target.value);
   }
 
+  // Coins
   const filteredCoins = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLowerCase())
     )
 
   return (
+    // Search
     <div className="coin-app">
       <div className="coin-search">
         <h1 className="coin-text">Search a currency</h1>
@@ -37,6 +40,21 @@ function App() {
           />
         </form>
       </div>
+      {/* Coin headers */}
+      <div className="coin-container">
+        <div className="coin-row">
+        <div className="coin">
+          <h1 className='name'>Coin</h1>
+        </div>
+        <div className="coin-data">
+        <p className='header coin-price'>Price (GBP)</p>
+        <p className='header coin-volume'>24h Volume</p>
+        <p className='header coin-percent'>24h</p>
+        <p className='header coin-marketcap'>Market Cap</p>
+        </div>
+        </div>
+      </div>
+      {/* Coins */}
       {filteredCoins.map(coin => {
         return (
         <Coin 
